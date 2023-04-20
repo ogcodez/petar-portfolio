@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 .my-masonry {
     position: relative;
     margin-bottom: 30px;
@@ -38,11 +41,11 @@
 }
 .my-masnry-user-prof-desc {
     row-gap: 10px;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     text-transform: capitalize;
 }
 .my-masnry-user-prof-desc h1 {
-    color: var(--green-400);
+    color: #fdaf98;
 }
 .my-masnry-user-prof-desc h3 {
     color: var(--dark-600);
@@ -54,3 +57,5 @@
 .my-masonry:hover .my-masnry-user-box {
     margin-bottom: 15px;
 }
+
+  

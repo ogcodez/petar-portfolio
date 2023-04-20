@@ -10,7 +10,7 @@
     border-radius: 100%;
     width: 250px;
     height: 250px;
-    background: var(--green-400);
+    background: #fdaf98;
     z-index: 0;
     filter: blur(250px);
 }
@@ -22,7 +22,7 @@
 .heading-header-title {
     position: relative;
     font-size: 1.2rem;
-    color: var(--green-400);
+    color: #fdaf98;
     margin-left: 70px;
 }
 .heading-header-title::before {
@@ -33,7 +33,7 @@
     transform: translateY(-50%);
     width: 60px;
     height: 2px;
-    background-color: var(--green-400);
+    background-color: #fdaf98;
 }
 .heading-header-title::after {
     content: '';
@@ -43,12 +43,12 @@
     transform: translateY(-50%) rotate(45deg);
     width: 10px;
     height: 10px;
-    background-color: var(--green-400);
+    background-color: #fdaf98;
     box-shadow: 0 0 1px 3px var(--dark-900);
     border-radius: 4px;
 }
 .heading-header-second-title {
-    color: var(--green-white-100);
+    color: #fdaf98;
     font-size: 2.3rem;
     margin-top: 30px;
     font-weight: bolder;
@@ -86,26 +86,14 @@
     width: 50px;
     height: 40px;
     border-radius: 0;
-    background-color: transparent;
+    background-color: rgba(21,21,21,var(--tw-bg-opacity));
     cursor: pointer;
-}
-.search-btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(/public/img/search/SearchButton.png);
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
 }
 @media screen and (max-width: 840px) {
     .headings-header {
         align-items: center;
         margin-left: 0;
+        margin-top: -220px;
     }
     .heading-header-title {
         margin-left: -120px;

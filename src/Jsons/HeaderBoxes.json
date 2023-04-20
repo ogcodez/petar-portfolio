@@ -1,24 +1,19 @@
 {
     "informations": [
         {
-            "title": "artist",
-            "number": 900,
+            "title": "Photography",
+            "desc": "Any kind",
             "id": 1
         },
         {
-            "title": "wallpaper",
-            "number": 124,
+            "title": "Filming",
+            "desc": "Custom video shoot",
             "id": 2
         },
         {
-            "title": "art",
-            "number": 635,
+            "title": "Editing",
+            "desc": "Photo/Video",
             "id": 3
-        },
-        {
-            "title": "auction",
-            "number": 372,
-            "id": 4
-        }
+        }   
     ]
 }

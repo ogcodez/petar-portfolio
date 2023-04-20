@@ -4,7 +4,8 @@
 }
 .nav-title {
     font-size: 1.8rem;
-    color: var(--green-400);
+    color: #fdaf98;
+    padding-left: 8px;
 }
 .navbar-nav {
     margin-left: 140px;
@@ -14,7 +15,7 @@
     color: var(--dark-600);
 }
 .nav-item.active {
-    color: var(--green-white-100);
+    color: #fdaf98;
     position: relative;
 }
 .nav-item.active::before {
@@ -24,7 +25,7 @@
     height: 14px;
     top: 50%;
     left: -30px;
-    background: var(--green-400);
+    background: #fdaf98;
     border-radius: 5px;
     transform: rotate(45deg) translateY(-70%);
 }
@@ -38,6 +39,41 @@
 .navbar-responsive-menu {
     display: none !important;
 }
+.lin{
+    background-image: -webkit-linear-gradient(30deg, #FF8A65 50%, #ff896579 50%);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border-color: #FF8A65;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .lin > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: black;
+  } 
+  .menu {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+  }
+  .menu-item {
+    cursor: pointer;
+    padding: 5px;
+    height: 28px;
+    border-bottom: 1px solid rgb(187, 187, 187);
+  }
+  .menu-item:hover {
+    color: #2980b9;
+  }
+
 @media screen and (max-width: 1100px) {
     .d-none-1100 {
         display: none ;
