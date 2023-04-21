@@ -6,8 +6,6 @@ import ContainerCard from '../ContainerCard/ContainerCard';
 import Nav from "../Nav/Nav"
 import BrickLayout from "../BrickLayout/BrickLayout";
 import HeaderBoxes from "./HeaderBoxes/HeaderBoxes";
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
 
 // import something from react packages
 import { Camera, PenTool, Instagram, SmsEdit, } from "iconsax-react";

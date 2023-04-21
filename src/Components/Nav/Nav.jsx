@@ -2,38 +2,22 @@
 import styles from "./Nav.module.css"
 import React from 'react'
 // import other react pkg to use
-import { HambergerMenu, Instagram, SmsEdit, MenuBoard, ArrowUp3 } from "iconsax-react"
+import { Instagram, SmsEdit, MenuBoard, ArrowUp3 } from "iconsax-react"
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
-import Dropdown from 'react-dropdown'
+import Hamburger from 'hamburger-react'
 import 'react-dropdown/style.css'
+import { useState } from 'react'
 
 
 // Nav component
 const Nav = () => {
-    const options = [
-        {
-            value: 'lin',
-            label:  <div className={`${styles["lin"]}`}>
-                        <a href="https://www.linkedin.com/in/petar-divac-53a94b26b/">in</a>
-                    </div>
-        },
-        {
-            value: 'instagram',
-            label:  <a href="https://www.instagram.com/divacph/">
-                        <Instagram size="34" color="#FF8A65" variant="Bulk" />
-                    </a>
-        },
-        {
-            value: 'mail',
-            label: <Tooltip title="divacph@gmail.com">
-                        <IconButton>
-                            <SmsEdit size="34" color="#FF8A65" variant="Bulk" />
-                        </IconButton>
-                    </Tooltip>
-        }
-    ]
-    
+    const [isOpen, setOpen] = useState(false)
+    function toggle() {
+        setOpen(!isOpen)
+        console.log(isOpen)
+    }
+
     return (
         <nav className={`${styles.nav} flex align-items-center`}>
             <MenuBoard size="24" color="#FF8A65" variant="Bulk" />
@@ -59,7 +43,30 @@ const Nav = () => {
                         <Instagram size="34" color="#FF8A65" variant="Bulk" />
                     </a>
                 </li>
-            </ul>  
+            </ul>
+            <div className={`${styles["dd"]}`}>
+                <Hamburger color="#FF8A65" toggled={isOpen} toggle={toggle} rounded />
+                {isOpen && <ul className={`${styles["ddUl"]}`}>
+                    <li>
+                        <Tooltip title="divacph@gmail.com">
+                            <IconButton>
+                                <SmsEdit size="34" color="#FF8A65" variant="Bulk" />
+                            </IconButton>
+                        </Tooltip>
+                    </li>
+                    <li>
+                        <div className={`${styles["lin"]}`}>
+                            <a href="https://www.linkedin.com/in/petar-divac-53a94b26b/">in</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/divacph/">
+                            <Instagram size="34" color="#FF8A65" variant="Bulk" />
+                        </a>
+                    </li>
+                </ul>}
+            </div>
+
         </nav>
     )
 }
