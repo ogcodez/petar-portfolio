@@ -6,19 +6,18 @@ import ModalImage from "react-modal-image";
 
 
 // MasonryBox component
-const MasonryBox = ({ wallSrc, userName, userJob }) => {
+const MasonryBox = ({ wallSrc, userCity, userCountry }) => {
   return (
     <div className={styles["my-masonry"]}>
         <ModalImage
           small={wallSrc}
           large={wallSrc}
-          alt={userName}
         />
       <div className={`${styles["my-masnry-description"]} flex`}>
         <div className={`${styles["my-masnry-user-box"]} flex align-items-center`}>
           <div className={`${styles["my-masnry-user-prof-desc"]} flex flex-column`}>
-            <h1>{userName}</h1>
-            <h3>{userJob}</h3>
+            <h1>{userCity}</h1>
+            <h3>{userCountry}</h3>
           </div>
         </div>
       </div>
@@ -29,8 +28,8 @@ const MasonryBox = ({ wallSrc, userName, userJob }) => {
 // validate MasonryBox component
 MasonryBox.propTypes = {
   wallSrc: PropTypes.string.isRequired,
-  userName: PropTypes.string.isRequired,
-  userJob: PropTypes.string.isRequired,
+  userCity: PropTypes.string.isRequired,
+  userCountry: PropTypes.string.isRequired,
 }
 
 export default MasonryBox

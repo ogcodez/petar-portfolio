@@ -24,22 +24,22 @@ const App = () => {
     },
     {
       id: 2,
-      title: "Topic Images",
+      title: "Belgrade",
       active: false
     },
     {
       id: 3,
-      title: "Nature Images",
+      title: "New York",
       active: false
     },
     {
       id: 4,
-      title: "NFT Images",
+      title: "Hawaii",
       active: false
     },
     {
       id: 5,
-      title: "Space Images",
+      title: "California",
       active: false
     }
   ]
