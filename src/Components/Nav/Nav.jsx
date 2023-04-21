@@ -1,15 +1,39 @@
 // import styles of this component
 import styles from "./Nav.module.css"
-
+import React from 'react'
 // import other react pkg to use
-import { HambergerMenu, Instagram, SmsEdit, MenuBoard } from "iconsax-react"
+import { HambergerMenu, Instagram, SmsEdit, MenuBoard, ArrowUp3 } from "iconsax-react"
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
-import Popup from 'reactjs-popup'
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
 
 
 // Nav component
 const Nav = () => {
+    const options = [
+        {
+            value: 'lin',
+            label:  <div className={`${styles["lin"]}`}>
+                        <a href="https://www.linkedin.com/in/petar-divac-53a94b26b/">in</a>
+                    </div>
+        },
+        {
+            value: 'instagram',
+            label:  <a href="https://www.instagram.com/divacph/">
+                        <Instagram size="34" color="#FF8A65" variant="Bulk" />
+                    </a>
+        },
+        {
+            value: 'mail',
+            label: <Tooltip title="divacph@gmail.com">
+                        <IconButton>
+                            <SmsEdit size="34" color="#FF8A65" variant="Bulk" />
+                        </IconButton>
+                    </Tooltip>
+        }
+    ]
+    
     return (
         <nav className={`${styles.nav} flex align-items-center`}>
             <MenuBoard size="24" color="#FF8A65" variant="Bulk" />
@@ -35,11 +59,8 @@ const Nav = () => {
                         <Instagram size="34" color="#FF8A65" variant="Bulk" />
                     </a>
                 </li>
-            </ul >
-            <div className={styles["navbar-responsive-menu"]}>
-                <HambergerMenu size="32" color="var(--white-100)" />
-            </div>
-        </nav >
+            </ul>  
+        </nav>
     )
 }
 
