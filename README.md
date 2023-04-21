@@ -1,3 +1,3 @@
-﻿# petar-portfolio
-# npm i 
-# npm start
+﻿# React portfolio template built for a friend
+# https://petar-portfolio.netlify.app/ == LIVE
+`npm i` to install ==> `npm start`
