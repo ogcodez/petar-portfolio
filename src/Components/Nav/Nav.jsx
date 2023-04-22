@@ -13,10 +13,6 @@ import { useState } from 'react'
 // Nav component
 const Nav = () => {
     const [isOpen, setOpen] = useState(false)
-    function toggle() {
-        setOpen(!isOpen)
-        console.log(isOpen)
-    }
 
     return (
         <nav className={`${styles.nav} flex align-items-center`}>
@@ -45,7 +41,7 @@ const Nav = () => {
                 </li>
             </ul>
             <div className={`${styles["dd"]}`}>
-                <Hamburger color="#FF8A65" toggled={isOpen} toggle={toggle} rounded />
+                <Hamburger color="#FF8A65" toggled={isOpen} toggle={setOpen} rounded />
                 {isOpen && <ul className={`${styles["ddUl"]}`}>
                     <li>
                         <Tooltip title="divacph@gmail.com">
@@ -66,7 +62,6 @@ const Nav = () => {
                     </li>
                 </ul>}
             </div>
-
         </nav>
     )
 }
