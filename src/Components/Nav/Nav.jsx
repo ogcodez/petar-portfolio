@@ -44,11 +44,9 @@ const Nav = () => {
                 <Hamburger color="#FF8A65" toggled={isOpen} toggle={setOpen} rounded />
                 {isOpen && <ul className={`${styles["ddUl"]}`}>
                     <li>
-                        <Tooltip title="divacph@gmail.com">
-                            <IconButton>
-                                <SmsEdit size="34" color="#FF8A65" variant="Bulk" />
-                            </IconButton>
-                        </Tooltip>
+                        
+                            <SmsEdit onClick={() => window.location = 'mailto:divacph@gmail.com'} size="34" color="#FF8A65" variant="Bulk" />
+                            
                     </li>
                     <li>
                         <div className={`${styles["lin"]}`}>
